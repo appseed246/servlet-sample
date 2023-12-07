@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
+    <context-param>
+        <param-name>param1</param-name>
+        <param-value>value1</param-value>
+    </context-param>
     <servlet>
         <servlet-name>Hello</servlet-name>
         <servlet-class>com.github.appseed246.HelloWorldServlet</servlet-class>
