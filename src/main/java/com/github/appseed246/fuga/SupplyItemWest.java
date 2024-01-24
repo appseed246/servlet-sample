@@ -4,6 +4,8 @@ import com.github.appseed246.hoge.ItemWest;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 public enum SupplyItemWest implements SupplyItem<ItemWest> {
     SUPPLY_ITEM_WEST1("提供アイテム1", "SP01E", ItemWest.ITEM1),
@@ -17,4 +19,8 @@ public enum SupplyItemWest implements SupplyItem<ItemWest> {
 
     @Getter
     private final ItemWest item;
+
+    public static Optional<SupplyItemWest> fromItem(ItemWest item) {
+        return SupplyItem.fromItem(item, SupplyItemWest.class);
+    }
 }
